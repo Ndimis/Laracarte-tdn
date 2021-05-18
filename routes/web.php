@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\contactsController;
+use App\Mail\ContactMessageCreated;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,10 @@ Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/about', [PagesController::class, 'about'])->name('about');
 
 Route::get('/contact', [ContactsController::class, 'create'])->name('contact');
+
+Route::post('/contact', [ContactsController::class, 'store'])->name('store');
+
+Route::get('/test-email',function(){
+	return new ContactMessageCreated('Ndimis','tndimis@live.fr','Merci Honore TDN.');
+});
+		
