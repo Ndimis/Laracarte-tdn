@@ -28,7 +28,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link {{ set_active_route('contact')}}"  href="{{route('contact')}}">Contact</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
