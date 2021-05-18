@@ -8,10 +8,10 @@
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+          <a class="nav-link {{ set_active_route('home')}}" aria-current="page" href="{{route('home')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('about')}}">About</a>
+          <a class="nav-link {{ set_active_route('about')}}" href="{{route('about')}}">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Artisan</a>
